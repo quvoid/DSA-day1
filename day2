@@ -1,0 +1,76 @@
+DAY 2 -- static block method and constructor 
+
+static block ===
+
+class Demo {
+    static {
+        System.out.println("Static Block");
+    }
+    Demo() {
+        System.out.println("Constructor");
+    }
+}
+public class q2 {
+    public static void main(String[] args){
+        Demo d1 = new Demo();
+        Demo d2 = new Demo();
+    }
+}
+//---using static keyword static block will be created and it is a singleton block
+//---Static method : for static method no need to create objects , static will act as instance or object and using class name , you can call static methods
+
+\\\--------------------------------------------------------------------------------------------------------------------------------------------------------------------\\\
+
+class Animal {
+    static void eat(){
+        System.out.println("ANimal is eating");
+    }
+}
+
+class Dog extends Animal {
+    static void eat(){
+        System.out.println("Dog is eating");
+    }
+}
+
+public class Main { 
+    public static void main(String[] args){
+        Animal.eat();
+        Dog.eat();
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------\\\
+CONSTRUCTOR : initialization of objects , calling default constructors to create objects 
+
+CONDITIONAL STATEMENTS : 
+it will take the condition and it will bring that block 
+types : if , else , else-if , SWITCH case 
+
+if (age < 18){
+    System.out.println();
+}
+else{
+
+}
+
+condoitional statements are used to get output in constant time 
+
+recursion : 
+public class HCFRecursion {
+    // Recursive function to find HCF
+    static int findHCF(int a, int b) {
+        if (b == 0)
+            return a;
+        else
+            return findHCF(b, a % b);
+    }
+
+    public static void main(String[] args) {
+        int num1 = 18, num2 = 12;
+        int hcf = findHCF(num1, num2);
+        System.out.println("HCF of " + num1 + " and " + num2 + " is: " + hcf);
+    }
+}
+EXAMPLE FOR SWITCH CASE : 
+
+
