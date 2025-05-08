@@ -1,0 +1,365 @@
+Java DSA day  4 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Switch case :-
+- cases have to be the same type as expressions , must be a constant or litera
+- Dulicate case values are not allowed 
+- If braek is use to terminate the sequence
+-  default will execute when none of the above does 
+-  if default is not at the end , put break after 
+
+without Switch case :- 
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the Number : ");
+		int n =  sc.nextInt();
+		
+		if (n==1){
+		    System.out.print("Monday");
+		}
+		else if (n==2){
+		    System.out.print("Tuesday");
+		}
+		else if (n==7){
+		    System.out.print("Sunday");
+		}
+		else {
+		    System.out.print("Enter valid number ");
+		}
+	}
+}
+
+With switch case :-
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the Number : ");
+		int n =  sc.nextInt();
+		
+		switch(n){
+		    case 1:
+		        System.out.print("Monday");
+		        break ;
+		    case 2:
+		        System.out.print("Tuesday");
+		        break ;
+		    case 3:
+		        System.out.print("Wednesday");
+		        break ;
+		    case 4:
+		        System.out.print("thrusday");
+		        break ;
+		    case 5:
+		        System.out.print("friday");
+		        break ;
+		    case 6:
+		        System.out.print("saturday");
+		        break ;   
+		  case 7:
+		        System.out.print("sunday");
+		        break ;     
+		  default :
+		  
+		        System.out.print("Enter valid num ");
+		        break ;
+		}
+	}
+}
+
+Enhanced switch case :- 
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int choice = sc.nextInt();
+        
+        switch(choice){
+               case 1 -> System.out.print("Monday");
+               case 2 -> System.out.print("tuesday");
+               case 3 -> System.out.print("wednesday");
+               case 4 -> System.out.print("thursday");
+               
+        }
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Addition of the numbers , but the output should be in single digit :-
+ Example -- input is 123 than output should be 6 . 
+
+code :-
+import java.util.*;
+public class Main{
+    public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+           System.out.print("Enter the Numder : "); 
+        
+            int n = sc.nextInt();
+           
+            while (n>9){
+            int sum =  0;    
+           
+            while(n!=0){
+                int rem = n % 10;
+                sum = sum + rem ;
+                n = n/10;
+                
+            }
+            n = sum;
+            }
+        System.out.print(n);
+        
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Reverse Right Angeled Triangle 
+
+import java.util.Scanner;
+
+public class ReverseRightTriangle {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of rows: ");
+        int n = sc.nextInt();
+
+        for (int i = n; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Terinary operators :-
+
+(Condition ) ?  statement1 : statement2 ; --> Syntax 
+
+String res = (n== 5) ? "Yes" : "No";
+
+System.out.println(res);
+
+print hallosquare using terinary operator :-
+code :-
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter size of square: ");
+        int n = sc.nextInt();  
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                
+                System.out.print((i == 1 || i == n || j == 1 || j == n) ? "*" : " ");
+            }
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+Enhanced for loop :-
+for each :-
+wherever we don't have length and whenever don't know index values then we need to use for each loops .
+mostly we use for each loop in collections .
+example:- List set and Map .
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+ piramid pattern using for each :-
+
+public class Main {
+    public static void main(String[] args) {
+        int[] rows = {1, 2, 3, 4, 5}; 
+
+        for (int level : rows) {
+            
+            for (int i = 0; i < rows.length - level; i++) {
+                System.out.print(" ");
+            }
+
+            
+            for (int j = 0; j < 2 * level - 1; j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+
+Diamond pattern :- 
+public class DiamondPattern {
+    public static void main(String[] args) {
+        int n = 5; // number of rows in top half
+
+        // Top half
+        for (int i = 1; i <= n; i++) {
+            // Print spaces
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            // Print stars
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        // Bottom half
+        for (int i = n - 1; i >= 1; i--) {
+            // Print spaces
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            // Print stars
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+Hollow piramid pattern
+
+code :-
+
+public class Main {
+    public static void main(String[] args) {
+        int n = 5; 
+        for (int i = 1; i <= n; i++) {
+            
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+
+            
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                if (j == 1 || j == 2 * i - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+
+            System.out.println();
+        }
+
+        
+        for (int i = n - 1; i >= 1; i--) {
+            
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+
+            
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                if (j == 1 || j == 2 * i - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+
+            System.out.println();
+        }
+    }
+}
+ 
+pattern :-
+
+public class Main {
+    public static void main(String[] args) {
+       
+        for (int i = 5; i >= 1; i--) {
+            for (int j = 1; j <= 5 - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                if (k == 1 || k == 2 * i - 1 || i == 5) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+
+      
+        for (int i = 2; i <= 5; i++) { 
+            for (int j = 1; j <= 5 - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                if (k == 1 || k == 2 * i - 1 || i == 5) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+Butterfly pattern :-
+public class Main {
+    public static void main(String[] args) {
+        int n = 5; 
+
+        
+        for (int i = 1; i <= n; i++) {
+           
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+        
+            for (int j = 1; j <= 2 * (n - i); j++) {
+                System.out.print(" ");
+            }
+            
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for (int i = n; i >= 1; i--) {
+          
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            
+            for (int j = 1; j <= 2 * (n - i); j++) {
+                System.out.print(" ");
+            }
+            
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
