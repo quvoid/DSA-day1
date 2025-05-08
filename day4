@@ -360,6 +360,22 @@ public class Main {
 }
 
 
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int val = sc.nextInt();
+        if(val<=n || val%n==1 ||val%n ==0){
+            System.out
+        }else{
+            
+        }
+    }
+}
+
+
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
