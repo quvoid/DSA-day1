@@ -1,0 +1,224 @@
+day 5 :
+
+ARRAYS :
+int a = 9;
+int b =10;
+int c =7;
+all the reference name will be stored in stack memory and all the values which where assign to those variables will be stored in heap memory .
+Here all the block will have same data types ,whyto create multiple variables , simply we can create an array to store all those values .
+
+definiton of array : 
+collection of similar types of data in continous allocation 
+
+if variable a stored in address 100 then the second value of the array should be allocated at 104 is called continous allocation .
+
+SYNTAX OF ARRAY :
+dataype[] arrayname;
+
+int[] arr = {1,2,3,4,5}; //declaration and initialization happened at same Line ;
+
+int[] arr;               //now declaration happened in first line 
+arr = {1,2,3,4,5};      //initialization on second Line
+if you want to get data , previously we stored data in individual variables , and if u want to get the data we can simply print the variables and in array
+we have to print the data using index values .
+Index values by default it will start with zero .
+arr.length = get the Length of arr length
+str.length() get string length 
+________________________________________________________________________________________________________________________________________________________
+Type of Output formats :
+we can use :
+1.Simple for loop to get output
+2.USing for each Loop 
+3.toString is inbuilt method to print array values 
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5};
+        
+        for(int i : arr){
+            System.out.println(i);
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+}
+Internally toString contains for loop and it will print along with open and closed [] square brackets followed by commas .
+
+CAMEL CASE AND SNAKE CASE :
+int odd_count;int oddCount;
+int odd_count = snake case 
+int oddCount =  camel case >>>>>>>
+
+JAVA STRICTLY FOLLOWS CAMEL CASE 
+question : In a given array count odd and even 
+
+------------------------------------------------------------------------------------------------------
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        int Hvalue = arr[0];
+        int secondvalue = arr[0];
+        
+        for(int i = 0; i < arr.length; i++) {  // Fixed: changed <= to < and removed extra ]
+            if(arr[i] > Hvalue) {              // Fixed: comparing array element with Hvalue
+                Hvalue = arr[i];
+            }
+        }
+        
+        System.out.println("Highest value: " + Hvalue);
+    }
+}
+---
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5,9,8,0};
+        int Hvalue = arr[0];
+        int secondvalue = arr[0];
+        
+        for(int i = 0; i < arr.length; i++) {  // Fixed: changed <= to < and
+            if(arr[i]> Hvalue){
+                secondvalue = Hvalue;
+                Hvalue = arr[i];
+            }
+            else if(arr[i] > secondvalue && arr[i] < Hvalue){
+                secondvalue = arr[i];
+            }
+        }
+        System.out.println(secondvalue);
+        System.out.println(Hvalue);
+    }
+}
+
+
+Declaring and initailizing an array with size 
+int[] arr = new int[5];
+once u created an array along with size , it cant be modified, the size is fixed and 
+int[] arr will be created in stack memory and will be called as reference .
+
+new keyword helps to create object space for the array 
+if the array type is integer , by default all the values will be zero and array type is string , all the default values will be null .
+
+whenever we are trying to assign or print nth index we will get array out of bound exception , not an error its an exception
+
+PRIMITIVE DATA TYPES AND NON PRIMITIVE DATA TYPES :
+
+PRIMITIVE DATA TYPES : primitive data types cant be splited or divided :
+eg : int , float , char 
+
+NON primitive data types : can be splited or divided 
+eg : Strings and all user defined objects 
+eg :
+class Node{
+  int data;
+  Node next;
+}
+
+=============================================================================================================================================================
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] arr = new int[5];
+        
+        for(int i = 0;i<arr.length;i++){
+            System.out.println("Enter the values :");
+            arr[i] = sc.nextInt();
+        }
+        for(int i = 0;i<arr.length;i++){
+            System.out.println(arr[i]);
+        }
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+sort the array :
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        int[] arr = {1,4,6,2,3,5};
+        boolean isSorted = true ;
+        //check array is sorted or not 
+        for(int i =0;i<=arr.length;i++){
+            if(arr[i] > arr[i + 1]){
+                isSorted = false;
+                break;
+            }
+        }
+        if(!isSorted){
+            System.out.println("It is not sorted");
+        }
+        else{
+            System.out.println("Sorted");
+        }
+        
+    }
+}
+___________________________________________________________________________________________________________________________________
+class Main {
+
+        static int getIndex(int[] arr,int target){
+            for(int i = 0;i<arr.length;i++){
+                if(arr[i] == target){
+                    return i;
+                }
+            }
+            return -1;
+            
+        }
+        public static void main(String[] args){
+            int[] arr = {1,2,3,4,5};
+            int target = 3;
+            System.out.println(getIndex(arr,target));
+        }
+}
+_____________________________________________________________________________________________________________________________________________________________________
+import java.util.Scanner;
+class Main {
+
+        static int getIndex(int[] arr,int target){
+            for(int i = 0;i<arr.length;i++){
+                if(arr[i] == target){
+                    return i;
+                }
+            }
+            return -1;
+            
+        }
+        public static void main(String[] args){
+            int[] arr = {1,2,3,4,5};
+            int target = 3;
+            System.out.println(getIndex(arr,target));
+        }
+}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+class Main{
+    static String checkSorted(int[] arr){
+        int flag = 0;
+        for(int i = 0 ;i<arr.length-1;i++){
+            if(arr[i]>arr[i+1]){
+                flag = 1;
+            }
+        }
+        if(flag == 0){
+            return "Sorted";
+        }else{
+            return "Unsorted";
+        }
+    }
+    public static void main(String[] args){
+        int[] arr = {1,2,3,4,5};
+        System.out.println(checkSorted(arr));
+    }
+}
+
+_____________________________________________________________________________________________________________________________________________________
+move 010101 all o zerom to the right
