@@ -1,0 +1,172 @@
+2D array consists of rows and columns 
+
+int [][] arr = new int[][] ;
+
+the first square bracket represents rows 
+second represents columns 
+while declaring the array we have to give number of rows and to mentrions number of columns is optional .
+
+siZe is maximum capacity of elements length is the length of array elements 
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int[][] arr = new int[3][2];
+        System.out.println("Enter the values :");
+        for(int i = 0;i<arr.length;i++){
+            for(int j = 0;j<arr[i].length;j++){
+                arr[i][j]= sc.nextInt();
+            }
+        }
+        for(int i = 0;i <arr.length;i++){
+            for(int j = 0;j<arr[i].length;j++){
+                System.out.println(arr[i][j]);
+            }
+            System.out.println();
+        }
+        for(int i = 0;i<arr.length;i++){
+            System.out.print(Arrays.toString(arr[i]));
+        }
+    
+    }
+}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+import java.util.*;
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int[][] arr = new int[3][3];
+        System.out.println("Enter the values :");
+        for(int i = 0;i<arr.length;i++){
+            for(int j = 0;j<arr[i].length;j++){
+                arr[i][j]= sc.nextInt();
+            }
+        }
+        for(int i = 0;i <arr.length;i++){
+            for(int j = 0;j<arr[i].length;j++){
+                System.out.println(arr[i][j]);
+            }
+            System.out.println();
+        }
+        for(int i = 0;i<arr.length;i++){
+            System.out.println(Arrays.toString(arr[i]));
+        }
+    
+    }
+}
+(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((
+
+JACKED ARRAY
+coloumns are dynamic 
+
+eg
+import java.util.*;
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int[][] arr = {
+                        {1,2,3,},
+                        {4,5},
+                        {6,7,8,9}
+                        };
+        for(int i = 0;i<arr.length;i++){
+            System.out.println(Arrays.toString(arr[i]));
+        }
+        
+    
+    }
+}
+output :
+[1, 2, 3]
+[4, 5]
+[6, 7, 8, 9]
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\\
+Sum of zig zag elements --> 1,2,3,5,7,8,9 --> 35e
+Find the missing number in an sorted array 
+[1,2,3,5,6,7,8,9] --> 4
+
+import java.util.*;
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,5,6,7,8,9};
+        
+        for(int i = 0 ;i <=arr.length-1;i++){
+            if(arr[i] + 1  != arr[i+1]){
+                int res = arr[i] + 1;
+               
+                
+            }
+        }
+        System.out.println(res);
+    }
+}
+
+
+-------------------------------
+import java.util.*;
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        int count = 0;
+        int max = 0;
+        int[] arr = {1,0,1,0,1,1,1,0,1,1,0,0};
+        for(int i = 0;i<=arr.length-1;i++){
+            if(arr[i] == 1){
+                count++;
+            }else{
+                count = 0;
+            }
+            max = Math.max(count,max);
+        }
+        System.out.println(max);
+    }
+}
+
+---max inbuilt function
+int max(int count,int max){
+  if(count>max){
+    return count;
+  }
+  else{
+    return max;
+  }
+}
+
+-------------------------------------------------------
+Take a square matrix , rotate 90 degrees ,
+
+import java.util.*;
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int[][] arr = new int[3][3];
+        System.out.println("Enter the values :");
+        
+        
+        for(int i = 0;i<arr.length;i++){
+            for(int j = 0;j<arr[i].length;j++){
+                arr[i][j] = sc.nextInt();
+            }  
+            
+        }
+        for(int i = 3;i<arr.length;i--){
+            for(int j=3;j<arr[i].length;j--){
+                System.out.print(arr[j][i]);
+            }
+            System.out.println();
+        }
+    }
+}
