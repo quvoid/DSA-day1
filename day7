@@ -1,0 +1,96 @@
+
+NExt greater element 
+
+Stacks --
+push()
+peek()
+pop()
+
+NEXT GREATER ELEMENT :
+
+|    |
+|    |
+| __ |
+
+MONOTONIC STACK : NEXT GREATER ELEMENT 
+push() the first element ;
+if the first element in stack is > greater than next element 
+push 
+if the element is smaller than next element : pop()
+
+array having fixed size , we cant increase the size as welll as we cant decrease : if array size is 5 , max element we can store is 5 elements , if we want to store 6th element we 
+have to create one more array with extra space or we cant increase the size but in array list the size will be dynamic u can increase the size as well decrease
+
+List is an interface 
+and the angular brackets are 
+and arrayList belongs to collection frameworks
+and we have to use wrapper class in collections followed by ArrayList name 
+ArrayList is class
+List<Wraper class of list type> ArrayListName = new ArrayList<>();
+                                                        |
+                                                      class
+
+Interface contains incomplete methods and class contains complete methods 
+As ArrayList is a class we have to import ArrayList class
+
+In arrayList , if the array got initialized to size 2 , if we are trying to add third element , the size of the list will be doubled and if the size of the array is 4 . If we are
+trying to add fifth element , the size will be doubled to 8 and vice versa if array size is 8 and if we removed 4 elements out of 8 and if we trying to remove fifth element 
+the array size becomes half .
+
+        // arr[4] = 1,2,3,4  5th element added 
+        // size will be arr[8] 
+        //arr[8] = 1,2,3,4,5,6,7,8
+        //arr[4]
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        //List<Wraper class of list type> ArrayListName = new ArrayList<>();
+        List<Integer> Leaders = new ArrayList<>();
+        int[] arr ={5,6,2,8,2,6};
+        int max = Integer.MIN_VALUE;
+        for(int i = arr.length-1;i>=0;i--){
+            if(arr[i] > max){
+                Leaders.add(arr[i]);
+                max = arr[i];
+            }
+        }
+        Collections.reverse(Leaders);
+        System.out.println(Leaders);
+        
+        // arr[4] = 1,2,3,4  5th element added 
+        // size will be arr[8] 
+        //arr[8] = 1,2,3,4,5,6,7,8
+        //arr[4]
+        
+    }
+}
+
+s = {1,3,0,5,8,5}
+e = {2,4,6,7,9,9}
+
+26,47,29 : custom sorting
+
+CUSTOM SORTING :
+if it is sorting we have only two possibilities and when it comes to custom sorting we can sort the values according to our format .
+19,26,39 -----> ascending order
+39,26,39 -----> descending order
+
+26,37,19 -----> Custom Sorting 
+-----------------------------------------------------------------------------------------------------------------------
+GREEDY ALGO :
+from given arrays make place .
+sort the array based on nth type 
+
+after sorting (1,2) will take first meeting 
+compare nth time to starting time of the next pairs , if starting time is strictly greater , consider the meeting 
+
+
+
+
+
+
+
+
+
+
