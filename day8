@@ -1,0 +1,32 @@
+day 8
+RECURSION :
+
+Recursion are nothing but Function calling itself and itself till it meets base conditions 
+two types = 
+Function calling same function itself and itself 
+
+function calling another function itself and itself.
+In java we dont have pointers so we cant use reference .
+JAVA is strictly pass by value not pass by reference .
+If we didnt mention base case properly will get an exception called stack overflow 
+Recursions are used to break the code .
+
+Write the code for factrorial using recurion ?
+
+Draw the tree by factorial = 5 * 4 factorial.
+
+after writing Recursion tree :
+All the returned values will be pushed into a stack whenever we hit base condition the elements will be popped . 
+PSUEDO CODE : 
+fact(n){
+  if(n==0){
+    return i;
+  }
+  else
+    return n * fact(n-1);
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FACTORIAL USING RECURSION : 
+
+
+
