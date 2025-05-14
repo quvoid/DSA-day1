@@ -1,0 +1,31 @@
+day 9 
+STRING :
+Collection of characters is called Strings .
+
+int[] array = { 1,2,3,4,5};
+as all the elements are similar that is why we created an array to store all those similar elements and to get the array values using index values similarly to store multiple 
+characters we created a strings 
+when u created a string reference will be stored in stack memory , object will be created in string pool , once a objecct created in string pool , it will be created with some 
+fixed size so we cant remove , we cant add , we cant modify the string that is why strings are immutable .
+
+class Main {
+    static String skip(String str) {
+        if (str.isEmpty()) {
+            return "";
+        }
+        char ch = str.charAt(0);
+        if (ch == 'e') {
+            return skip(str.substring(1));
+        } else {
+            return ch + skip(str.substring(1));
+        }
+    }
+
+    public static void main(String[] args) {
+        String ip = "Hello";
+        String str = skip(ip);
+        System.out.println(str);
+    }
+
+
+FROM A GIVEN STRING SKIP A ENTIRE WORD CALLED HELLO
