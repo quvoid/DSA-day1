@@ -1,0 +1,49 @@
+All the strings are create in string pool
+double = operator is used to check the address or reference 
+
+-length() 
+
+-charAt(int index)
+
+-substring(int Beginindex , int endIndex)
+
+-contains(CharSequence s)
+
+-startsWith(String prefix)
+
+-toUpperCase() / toLowerCase()
+
+-trim() - remove leading and trailing spaces
+
+-replace(String old, String new)
+
+-split(String regex)
+
+-equals(String anotherString) / equalsIgnoreCase(String)
+
+SUBSETS : 
+For a given array , we get 2^n (power n) subsets .
+In a sequence , subset should be in sequence , not in continous .
+
+
+BACKTRACKING : 
+It is an example of recursion , although we are taking same thing taking the value and not taking the value 
+we have only two steps , taking the values and not taking the values .
+Whenever u reach base case , u have to print all the base case elements .
+when array length is equal to original array length , that is our base case .
+And in every recursive call , remove the last element then it will backtrack .
+
+DUTCH NATIONAL FLAG ALGORITHM :
+{1,0,0,2,1,2,0,2}
+Initialise L pointer at 0th index ;
+and M pointer at 0th index ; 
+and H pointer at n-1 index ;
+The elements between M and H are not sorted so we have to run a loop from M to H , 
+If both crosses it means we are reaching each and every element 
+IF array of M is 0 , swap array of M and array L .
+After swapping increase M , increase L 
+If array of M = 1 ,Just move M pointer .
+If array of m  = 2 ; swap array of M and array of H
+after swapping decrease H .
+now based on above lIne write the code ?
+
