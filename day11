@@ -44,4 +44,32 @@ List<Integer> listname = new ArrayList<>();
 Set<Integer> st = new Hashset<>();
 
 Map<Integer,Integer> mp = new HashMap<>();
+-----------------------------------------------------------------------------------------------------------------------------------------
+Kadane's ALGORITHM
+
+From the give array , we have to find maximum sum of sub arrays 
+eg : {1,2,3}
+[1],[2],.....
+To find maximum sum of subarrays for optimal solution we can use Kadane's Algroithm
+
+Step 1 : Initialize two variables .
+Step 2 : One is for individual sums and second variable is for max  sum are initialized sum = 0 ; aned other with extreme negative value ;
+step 3 : Run a loop from 0 to N-1 , Get the individual values from array and add them .
+step 4 : Always update Max value 
+step 5 : Our Target is To get the Max sum , if we carry negative values , the overall sum will be reduced so if we got sum less than 0 (sum<0) 
+          restart the sum with 0 .
+step 6 : at the end of the loop and return max
+
+
+
+
+
+
+
+
+
+
+
+
+
 
