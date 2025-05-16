@@ -1,0 +1,47 @@
+Day 11 
+Collection Frameworks : 
+LIST                      SET                     MAP
+
+-->ArrayList ------->    HashSet           ------->HashMap
+-->LinkedList  ----->    LinkedHashSet     ------->linkedHashMap
+-->Vector     ------>    TreeSet           ------->TreeMap
+
+
+List, SEt ,Map , these are interfaces
+rest of the elements are classes
+
+Interface contains incomplete methods 
+classes contains complete methods
+
+LIST : 
+List contains ordered elements and which can accepts duplicates 
+Array List is a dynamic array which can expand its size dynamically by 1.5 times 
+
+Vector is also a dynamic array which can expands its size dynamically by 2 times .
+
+LinkedList : Collection of similar types of elements in random allocation 
+----------------------------------------------------------------------------
+
+SET :
+Elements are unordered and we dont accept duplicates 
+
+last set is a class which is used to store as set is unordered , if used treeset , the elements will be ordered .
+
+----------------------------------------------------------------------------=\
+
+MAPs :
+
+Map contains Key : value pairs and TO store key value pairs we use HashMap
+
+Set unmaps are used to get the result  in big O of 1 time complexity 0(1) or constant time complexity
+-In sets and maps we dont have index value , just like arrays , we cant use simple for Loop , we have to use for each loop 
+
+---------------------------------------
+
+SYNTAX : 
+List<Integer> listname = new ArrayList<>();
+
+Set<Integer> st = new Hashset<>();
+
+Map<Integer,Integer> mp = new HashMap<>();
+
