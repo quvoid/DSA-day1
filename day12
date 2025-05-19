@@ -1,0 +1,19 @@
+MAJORITY ELEMENTS :
+
+input array = [2,2,1,2,1] output = 2 ;
+in the given array , if the n is repeated more than 2 times , it is called MAJORITY ELEMENT .
+
+VOTING ALGORITHM :
+Assume that the first element is Target element 
+we start comparing rest of the elements 
+and If we got same elements , increase the counter or else decrease .
+Whenever counter become 0 , restart the target value to the next element of array ;
+If counter becomes 0 , its states that there is no majority element and if counter is greater than zero , check that target element in our array . 
+And count how many times it were repeated and if repeated more than n/2 , THats the majority element 
+
+Longest consecutive elements : 
+input[1,2,101,3,103,4,103)
+
+1: Push  the array elements into the sets
+2: start iterating set elements Useing for each loop
+3: Find the starting point 
