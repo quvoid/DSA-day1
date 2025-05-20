@@ -10,6 +10,7 @@ and If we got same elements , increase the counter or else decrease .
 Whenever counter become 0 , restart the target value to the next element of array ;
 If counter becomes 0 , its states that there is no majority element and if counter is greater than zero , check that target element in our array . 
 And count how many times it were repeated and if repeated more than n/2 , THats the majority element 
+--------------------------------------------------------------------x--------------------------------------------------------------------------------------------
 
 Longest consecutive elements : 
 input[1,2,101,3,103,4,103)
@@ -17,3 +18,140 @@ input[1,2,101,3,103,4,103)
 1: Push  the array elements into the sets
 2: start iterating set elements Useing for each loop
 3: Find the starting point 
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+import java.util.HashSet;
+import java.util.Set;
+
+class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 101, 3, 102, 4, 103};
+        System.out.println("Longest consecutive sequence length: " + longestConsecutive(arr));
+    }
+
+    public static int longestConsecutive(int[] nums) {
+        Set<Integer> numSet = new HashSet<>();
+        for (int num : nums) {
+            numSet.add(num);
+        }
+
+        int longestStreak = 0;
+
+        for (int num : numSet) {
+            // Check if it's the start of a sequence
+            if (!numSet.contains(num - 1)) {
+                int currentNum = num;
+                int currentStreak = 1;
+
+                // Count consecutive numbers
+                while (numSet.contains(currentNum + 1)) {
+                    currentNum += 1;
+                    currentStreak += 1;
+                }
+
+                longestStreak = Math.max(longestStreak, currentStreak);
+            }
+        }
+
+        return longestStreak;
+    }
+}
+-----------------------------------------------------------------------------------------------------------x-------------------------------------------------------
+
+class Main {
+    public static void main(String[] args) {
+        String ip = "abc";
+        subseq(ip,"");
+        
+    }
+    static void subseq(String ip, String op){
+        if(ip.isEmpty()){
+            System.out.println(op);
+            return ;
+        }
+        char ch = ip.charAt(0);
+        subseq(ip.substring(1), op + ch);
+        subseq(ip.substring(1), op );
+    }
+}
+
+
+SLIDING WINDOW  : 
+1 : we have to use two pointers 
+2 : Types = 
+              Constant window 
+              Dynamic window
+3 : So in constant window , The size is fixed , In dynamic window , the window might expand or sink .
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+question : 1423. Maximum Points You Can Obtain from Cards
+
+Hint
+There are several cards arranged in a row, and each card has an associated number of points. The points are given in the integer array cardPoints.
+
+In one step, you can take one card from the beginning or from the end of the row. You have to take exactly k cards.
+
+Your score is the sum of the points of the cards you have taken.
+
+Given the integer array cardPoints and the integer k, return the maximum score you can obtain.
+
+EXPLAInation : We have 4 cases 
+1. Taking 3 values from left 
+2. 2 left and 1 right
+3. 1 left and 2 right
+4. 3 right 
+
+BINART SEARCH : 
+condition : the array should be sorted .
+step 1 : Initialize to pointer .
+step 2 : Run the loop , till i and j crosses each other .
+step 3 : FInd the middle value .
+step 4 : Compare middle value with the target .
+step 5 : If array of mid  = target , return mid .
+step 6 : as elements are sorted , if target element is greater to array of mid ,it means , the element lies in right portion of array . So need to check in LEFT portion.
+         So the right pointer will remain same , Left pointer will be updated to mid + 1 ; Else , it might lie in left array , so right pointer need to be updated .
+
+code : 
+
+public class BinarySearch {
+    // Iterative binary search
+    public static int binarySearch(int[] arr, int target) {
+        int left = 0;
+        int right = arr.length - 1;
+        
+        while (left <= right) {
+            int mid = left + (right - left) / 2; // Prevents integer overflow
+            
+            if (arr[mid] == target) {
+                return mid; // Target found
+            } else if (arr[mid] < target) {
+                left = mid + 1; // Search right half
+            } else {
+                right = mid - 1; // Search left half
+            }
+        }
+        return -1; // Target not found
+    }
+
+    public static void main(String[] args) {
+        int[] sortedArray = {2,3,1,4,6,5};
+        int target = 23;
+        
+        int result = binarySearch(sortedArray, target);
+        
+        if (result == -1) {
+            System.out.println("Element not found");
+        } else {
+            System.out.println("Element found at index: " + result);
+        }
+    }
+}
+
+
+
+
+
+
+
