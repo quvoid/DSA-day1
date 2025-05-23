@@ -1,1 +1,149 @@
 KOKO eating bananas :
+
+
+MAXIMUM product of Subarray : 
+[5,3,2,-1,0,5,7,8,0,-1,2]
+
+OBSERVATION : In a given subarray , if we have even negative values ,product will be positive  ;
+                                    if we have odd negative values , the product will be negative 
+                                    if we find zero , the product will be zero , then we have to make it 1 ; reinitiaize the product from 1 .
+                                    Initialize two variables ,prefix and suffix variables 
+                                    Calculate prefix product , calculate suffix product , get max of Prefix and suffix , we will get overall max .
+                                    Whenever the product becomes zero , it means 
+
+
+OBJECT ORIENTED PROGRAMMIng : 
+
+pre requirement : 
+Class , Object , Constuctor ,Interface . 
+
+class - Blueprint of Object . IT is a virtual entity .
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Object  - Instance of Class to call non static method which were present in that particular class we have to create object for that particular class . 
+          If it is a static method , u can directly call using class . 
+
+Constructor - Two types : default constructor and parameterised contructor . used to initialize the object .
+
+Default constructor  : for every class there will be default constructor and for every class there will be parameter .
+                       Constructor is neither class nor methods , its having the class name and method properties .
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Inheritance : 
+SIngle inheritance , Multiple inheritance , multilevel , hybrid .
+
+single inheritance :
+properties are inherited to child class from parent class .
+
+Multilevel Inheritance : 
+Properties are inherited to parent class from grandparent class and again properties inherited to child class from parent class .
+
+Multiple Inheritance : 
+So properties are inherited to child class from multiple parents . 
+
+hierarchy : properties are inherited to multiple childs .
+
+Extend keyword is used to inherit properties from classes . 
+
+Implement keyword is used to inherit properties from interfaces .
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+POLYMORPHISM : 
+Same method existing multiple times in different forms . 
+
+METHOD OVERLOADING - same method name existing in same class with different parameters .
+METHOD OVERRIDING  - Method declared in child class and the same method existing in parent class as same name and same parameters .
+
+Main method can be overriden .
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Encapsulation - Binding method and data and hiding sensative data .
+
+If variable declared as private variable in class , if you want to access the variable outside the class , we cant access , if we want to access using methods we can 
+access
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ABSTRACTION : 
+
+Sliding implementation showing extension later .
+if a method is a abstract method , the method name should start with abstract keyword as well as the class name should be start with abstract keyword .
+
+There are 4 types of abstraction : 
+1.Data abstraction
+2.Functioal abstraction
+3. Control abstraction
+4. Procedure abstraction 
+
+Abstract methods are incomplete methods .
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+INTERFACE : 
+Interface contains only abstract methods . we cant create object for interface . 
+
+Access Modifiers : 
+Public , Private , Protected and Default .
+
+Public - if a variable , method or class declared as a public . The scope will be within the class , within the file , within the package , outside the package , 
+         Parent class of outside the package , Outside the package child class .
+Private - if a variable , method or class declared as private , The scope will be within the class only 
+
+Protected - If a variable or method or class declared as a protected , the scope will be within the class , within the file , within the package , outside the package 
+            child class only . dont have scope for Outside the package parent class .
+
+Default - The scope will be within the class , within the file , within the package only .
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
