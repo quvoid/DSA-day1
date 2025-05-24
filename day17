@@ -1,0 +1,42 @@
+if a method is Incomplete we have to add abstract in the method 
+
+if a class contains abstract method we have to mention abstract keyword in front of class .
+
+a abstract class contains abstract methods and non abstract methods 
+
+Interface contains all the abstract methods so we can declare as a class , we have to declare as interface
+as we know interface contains only abstract methods.
+
+interface A {
+    abstract int method2(int a, int b);  // Interface method declaration
+}
+
+class B implements A {
+    // Implementing the interface method
+    public int method2(int a, int b) {
+        return a + b;
+    }
+}
+
+// If you want to create class C, it should implement the interface
+class C implements A {
+    public int method2(int a, int b) {
+        return a * b;  // Different implementation
+    }
+    
+    int method4(int a) {
+        return a;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        B obj2 = new B();
+        int res = obj2.method2(2, 3);  // Correct method name
+        System.out.println(res);  // Output: 5
+        
+        // If you want to use class C:
+        // C obj3 = new C();
+        // System.out.println(obj3.method2(2, 3));  // Would output 6
+    }
+}
