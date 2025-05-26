@@ -1,0 +1,109 @@
+DAY 19
+dATA STRUCTURES AND ALGORITHMS :
+
+organizing data efficiently for effective access and manipulation 
+using data structures, and defining step-by-step procedures (algorithms) to solve problems
+
+Importance of data structures : 
+Data structures are crucial for efficient data organization, storage, and retrieval in computer programs. They enable programmers to create efficient algorithms and 
+software that can handle large and complex datasets. Without them, managing data would be significantly harder, leading to slower processing times and more complex code.
+
+
+IMPROTANcE OF ALGORITHM : 
+Algorithms are crucial for efficient problem-solving, task automation, and enabling computers to perform complex operations. They provide a systematic 
+approach to solving problems, breaking them down into manageable steps and finding optimal solutions. Algorithms are essential for tasks like sorting data, 
+searching information, and even displaying webpages, making them fundamental to computer functionality. 
+
+TIME COMPLEXITY AND SPACE COMPLEXITY : 
+Time complexity describes how the execution time of an algorithm scales with the input size, while space complexity measures the amount of memory an algorithm uses
+
+1. Igrnore COnstants
+2. Ignore the small values 
+3. Focus on the worst case
+
+SPace complexity : the extra space we are using to solve the problem .
+
+LINKED LIST : 
+
+THere are three Types : SIngly lInked List , doubly Linked List , Circular Linked list
+
+Nodes followed by some links , and each node consists data and address of next node .
+There no data type which can store data as well as address .
+We have to create datatype user defined which can store data as well as address .
+
+class Node{
+    int data;
+    Node next;
+}
+
+Two possible objects :
+Type 1 : Single Node and last node , this object can accept data and address will be null. 
+
+first constructor : 
+Node(int data1){
+    this.data = data1;
+    this.next = null;
+}
+
+Second type : we nhave to create a constructor which can accept dataas well as address 
+Node(int data1,Node next){
+  this.data = data1;
+  this.next = next1;
+}
+
+
+-------------------------------
+
+class Node{
+    int data;
+    Node next;
+
+
+    Node(int data1){
+        this.data= data1;
+        this.next = null;
+    }
+    
+    Node(int data1, Node next1){
+        
+    }
+}
+
+class Main{
+    static Node convertArrayToLinkedList(int[] arr){
+        Node head = new Node(arr[0]);
+        Node current = head;
+        for(int i = 1; i <arr.length;i++){
+            Node temp = new Node(arr[i]);
+            current.next = temp;
+            current = temp;
+        }
+        return head;
+    }
+    
+    static void print(Node head){
+        Node temp = head;
+        while(temp!=null){
+            System.out.print(temp.data + ((temp.next!=null ?"->" : "Null")));
+            temp = temp.next;
+        }
+    }
+    
+    public static void main(String[] args){
+        int[] arr = {1,2,3,4,5};
+        Node head = convertArrayToLinkedList(arr);
+        print(head);
+    }
+}
+
+running code ;
+----------------------------------------------------------------------------
+Linked list is used for faster insertions and faster relations .
+
+INSERTION : Inserted a head , Insert a tail , Insert at Nth node(before or after) , Insert by value .
+DELETION : Delete Head , delete tail ,  Delete at Nth node , Delete by Value .
+
+SIngly lInked List = data will go in one direction
+double Linked List = bidirctional 
+
+
