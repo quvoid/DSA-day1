@@ -1,0 +1,102 @@
+DAY 21 
+
+STACKs : 
+Its follows last in first out 
+its comes under Linear data structures 
+
+Operations : push , pop , peek isEmpty , display , size .
+
+These are the most 
+
+Stack are used to get the output in constant time which is Big (O)1
+
+SORTING : 
+sorting algorithms are used to make the sorted data either ascending or descending .
+sorting algo is used to convert unsorted data to sorted which helps to get faster output . 
+
+examples : BUBBLE SORT  , SELECTION SORT , INSERTION SORT , MERGE SORT , QUICK SORT ,COUNT SORT , HEAP SORT , RADIX SORT .
+
+BUBBLE SORT : 
+Selecting the adjacent elements , comparing those elements and swapping .
+after completion of every iteration the weightest will go to nth play 
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Arrays;
+
+class Main {
+    public static void main(String[] args) {
+        int[] arr = {5, 3, 1, 4, 2};
+        bubbleSort(arr); // Sort the array
+        System.out.println("Sorted Array: " + Arrays.toString(arr));
+    }
+
+    // Bubble Sort Function
+    public static void bubbleSort(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    swap(arr, j, j + 1); // Call swap function
+                }
+            }
+        }
+    }
+
+    // Swap Function
+    public static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+}
+
+SELECTION SORT : 
+
+
+
+
+                        best case   ||   average case    ||    worst case
+-----------------------------------------------------------------------------
+
+1.Bubble sort
+
+2.Selecection sort
+
+3.Insertion sort 
+
+
+
+
+QUEUES : 
+Queues are special data structures which follows first in first out and which comes under linear data structures .
+
+TYPES OF QUEUES : 
+Single ended queue.
+double ended queue.
+Priority queue.
+Circular queue.
+
+types of priority queue : 
+Minqueue 
+Maxqueue 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
