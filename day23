@@ -1,0 +1,200 @@
+TREES AND GRAPH : 
+
+Trees are subset of graphs
+
+the new data can be added in any way
+Trees belongs to non Linear data structure .
+Data or Node can be added at any point .
+Tree is a customized data structures and the customization we required , we need to create node and that node contains data as well as left and right pointers .
+we want to get the output in Logn time complexity 
+The starting node will call it as a root node and rest of the nodes will call it as child nodes and the base nodes will call it as Leaf nodes
+
+Type of Trees : 
+N - array trees : 
+eg : Trie's
+
+Binary trees :
+eg : binary search tree , avl tree , segment tree .w
+
+Tree traversal : 
+
+DFS : 
+
+BFS : 
+Level order traversal 
+
+Every node is a root node . 
+
+HEight and diameter of the tree . 
+
+
+Perfect Binary tree  : Every level should be filled and every node contains two child nodes 
+
+complete b tree : every level should be filled and it should start from Left to right .
+
+BINARY SEARCH TREE  : 
+
+To solve this problem we are using priority queue and keep on pushing the elements into the queue(max queue) .
+If number of elements is greater than K , we have to POP . and as we keep on pushing the element into the queue , as we taken max queue , The elements will arrange in 
+descending order . At the end of the iteration ,my target value will be floated .
+Then our expected output will be the top element . 
+
+
+Binary search Tree : 
+Left < Root < Right 
+
+we have to create a tree .
+The root node contains at max two child nodes .
+
+Pre_()  Root left Right
+In_()   Left  Root Right
+Post_() Right Left Root
+
+Stacks are used for DFS .
+Queues are used for BFS .
+
+AVL tree or Self balanced tree :
+
+Whenever tree got unbalanced , using AVL methods the trees will be balanced .
+There are 4 cases : 
+first case : Left left 
+second case : Right right 
+third case : left Right
+fourth case : Right Left 
+
+Left rotate and right rotate .
+
+SEGMENT TREE : 
+[3,4,5,6,7]
+
+If it i
+we are using prefix sum for the optimal solution and it will take Big(O) n  time complexity 
+and if we want to get the same output in Logn time Complexity then we have to use trees that too segment
+whenever the array values are updated , if u are still using prefix sum further updated array we have to create one more prefix array . Now its taking N+n time complexity 
+as well as N+n space complexity 
+Now what if the array value are updated N times , definately N^2 the time complexity will n2 and space complexity will be n2 (square)
+
+Because of this reason , we have to use segment tree . 
+
+N array TREE : For the root node , if n child were attached , we will call it as a N array tree
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
