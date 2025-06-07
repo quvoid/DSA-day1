@@ -1,0 +1,10 @@
+
+whenever it is right right , do the right rotate
+
+whenever its is left right case , do the Left rotate and then the right rotate .
+
+whenever it is right left , do the right rotate then left rotate 
+
+
+15 -> 20 -> 10 -> 8 -> 5 -> 12 -> 25 -> 30 -> 35 -> 28 -> 40
+
